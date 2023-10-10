@@ -1,6 +1,3 @@
-import Link from "next/link";
-
-import { Icons } from "@/components/icons";
 import { Logo } from "./logo";
 import { MobileSidebar } from "./mobile-sidebar";
 import { NavbarItem } from "./navbar-item";
@@ -29,7 +26,7 @@ export const Navbar = () => {
             ))}
           </div>
         </div>
-        <div className="flex items-center gap-x-4 bg-gray-800/40 w-fit p-2 rounded-xl shadow-inner">
+        <div className="flex items-center gap-x-4 ring-2 ring-primary/20 bg-gray-800/40 w-fit p-2 rounded-xl shadow-inner">
           {SocialRoutes.map((route) => (
             <SocialsItem key={route.label} route={route} />
           ))}
