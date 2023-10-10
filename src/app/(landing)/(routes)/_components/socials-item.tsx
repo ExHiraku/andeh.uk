@@ -13,7 +13,7 @@ export const SocialsItem = ({ route }: { route: NavbarRoute }) => {
     <TooltipProvider>
       <Tooltip>
         <TooltipTrigger>
-          <Link href={route.href}>
+          <Link href={route.href} target="_blank">
             <route.icon className="text-primary fill-primary/50 hover:fill-primary transition duration-200" />
           </Link>
         </TooltipTrigger>
