@@ -3,6 +3,9 @@ import Link from "next/link";
 import { Icons } from "@/components/icons";
 import { Logo } from "./logo";
 import { MobileSidebar } from "./mobile-sidebar";
+import { NavbarItem } from "./navbar-item";
+import { NavbarRoutes, SocialRoutes } from "@/lib/constants";
+import { SocialsItem } from "./socials-item";
 
 export const Navbar = () => {
   return (
@@ -17,56 +20,19 @@ export const Navbar = () => {
         <div className="flex items-center gap-x-32">
           <Logo />
           <div className="flex items-center gap-x-8">
-            <p className="text-primary font-semibold">Home</p>
-            <Link
-              href="#about"
-              className="text-primary-foreground transition duration-200 hover:text-primary"
-            >
-              About
-            </Link>
-            <Link
-              href="#projects"
-              className="text-primary-foreground transition duration-200 hover:text-primary"
-            >
-              Projects
-            </Link>
-            <Link
-              href="#contact"
-              className="text-primary-foreground transition duration-200 hover:text-primary"
-            >
-              Contact
-            </Link>
+            {NavbarRoutes.map((route) => (
+              <NavbarItem
+                key={route.label}
+                route={route}
+                isActive={route.href === "/"}
+              />
+            ))}
           </div>
         </div>
-        <div className="flex gap-x-4">
-          <Link
-            href="https://discord.com/users/957437570546012240"
-            className="fill-white hover:fill-primary transition duration-200"
-            target="_blank"
-          >
-            {Icons.discord}
-          </Link>
-          <Link
-            href="https://x.com/ExHiraku"
-            className="fill-white hover:fill-primary transition duration-200"
-            target="_blank"
-          >
-            {Icons.twitter}
-          </Link>
-          <Link
-            href="https://github.com/ExHiraku"
-            className="fill-white hover:fill-primary transition duration-200"
-            target="_blank"
-          >
-            {Icons.github}
-          </Link>
-          <Link
-            href="https://twitch.tv/ExHiraku"
-            className="fill-white hover:fill-primary transition duration-200"
-            target="_blank"
-          >
-            {Icons.twitch}
-          </Link>
+        <div className="flex items-center gap-x-4 bg-gray-800/40 w-fit p-2 rounded-xl shadow-inner">
+          {SocialRoutes.map((route) => (
+            <SocialsItem key={route.label} route={route} />
+          ))}
         </div>
       </div>
     </nav>
