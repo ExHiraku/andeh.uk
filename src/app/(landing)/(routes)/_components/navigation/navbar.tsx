@@ -14,7 +14,7 @@ export const Navbar = () => {
         </div>
       </div>
       <div className="hidden md:flex items-center justify-between max-w-7xl mx-auto">
-        <div className="flex items-center gap-x-32">
+        <div className="flex items-center gap-x-20 lg:gap-x-32">
           <Logo />
           <div className="flex items-center gap-x-8">
             {NavbarRoutes.map((route) => (
