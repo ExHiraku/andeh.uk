@@ -13,18 +13,13 @@ const nextConfig = {
         permanent: false,
       },
       {
-        source: "/discord",
-        destination: "https://discord.com/users/957437570546012240",
+        source: "/instagram",
+        destination: "https://www.instagram.com/andehx/",
         permanent: false,
       },
       {
         source: "/github",
         destination: "https://github.com/AndehUK",
-        permanent: false,
-      },
-      {
-        source: "/twitch",
-        destination: "https://www.twitch.tv/andehx_",
         permanent: false,
       },
     ];

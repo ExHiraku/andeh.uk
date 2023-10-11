@@ -7,13 +7,16 @@ import { Button } from "@/components/ui/button";
 export const Hero = () => {
   return (
     <div className="py-8 md:py-24 px-8 max-w-7xl mx-auto">
-      <div className="h-full flex flex-col-reverse justify-between items-center gap-8 md:flex-row">
+      <div
+        className="h-full flex flex-col-reverse justify-between items-center gap-8 md:flex-row"
+        id="about"
+      >
         <div className="w-full space-y-12">
           <div className="space-y-8">
             <Heading icon={ChevronRight} label="Andeh" />
             <p className="text-center text-lg md:text-left">
-              👋 Hi, I&apos;m Andrew, a Full-Stack Web Developer from the UK
-              with over 2 years of experience in crafting seamless user
+              👋 Hi, I&apos;m Andrew, a 20 year old Software Developer from the
+              UK with over 2 years of experience in crafting seamless user
               experiences and robust backend architectures. With a diverse tech
               stack, I blend aesthetics with functionality in every project.
               Explore my portfolio to see the digital landscapes I&apos;ve
