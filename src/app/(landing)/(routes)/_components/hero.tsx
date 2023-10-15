@@ -14,7 +14,7 @@ export const Hero = () => {
         <div className="w-full space-y-12">
           <div className="space-y-8">
             <Heading icon={ChevronRight} label="Andeh" />
-            <p className="text-center text-lg md:text-left">
+            <p className="text-center text-zinc-300 text-lg md:text-left">
               👋 Hi, I&apos;m Andrew, a 20 year old Software Developer from the
               UK with over 2 years of experience in crafting seamless user
               experiences and robust backend architectures. With a diverse tech

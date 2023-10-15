@@ -11,6 +11,7 @@ import {
 import { Icons } from "@/components/icons";
 import { NavbarRoute } from "@/types/navbar-route";
 import { FeaturedProject } from "@/types/featured-project";
+import { Skill } from "@/types/skill";
 
 export const NavbarRoutes: NavbarRoute[] = [
   {
@@ -83,5 +84,38 @@ export const FeaturedProjects: FeaturedProject[] = [
       "A multi-page website built for the landscaping and car detailing company called Blu Contracting! Built using NextJS, React and TailwindCSS.",
     liveDemo: "https://blu.exultsoftware.com",
     displayImage: "",
+  },
+];
+
+export const Skills: Skill[] = [
+  {
+    label: "Python",
+    hoverColor: "",
+    imageUrl: "/assets/python.png",
+  },
+  {
+    label: "Node JS",
+    hoverColor: "",
+    imageUrl: "/assets/nodejs.png",
+  },
+  {
+    label: "Java",
+    hoverColor: "",
+    imageUrl: "/assets/java.png",
+  },
+  {
+    label: "Next JS",
+    hoverColor: "",
+    imageUrl: "/assets/nextjs.png",
+  },
+  {
+    label: "React",
+    hoverColor: "",
+    imageUrl: "/assets/react.png",
+  },
+  {
+    label: "Tailwind CSS",
+    hoverColor: "",
+    imageUrl: "/assets/tailwindcss.png",
   },
 ];

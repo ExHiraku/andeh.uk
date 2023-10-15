@@ -17,7 +17,12 @@ export const Heading = ({
         <Icon className="hidden h-[72px] w-[72px] text-primary md:flex" />
       )}
       <h1 className={cn("text-7xl font-bold", textClassName)}>
-        <span className="bg-clip-text text-transparent bg-gradient-to-br from-primary via-white/30 to-white/0">
+        <span
+          className={cn(
+            "bg-clip-text text-transparent bg-gradient-to-br from-primary via-white/30 to-white/0",
+            textClassName
+          )}
+        >
           {label}
         </span>
       </h1>
