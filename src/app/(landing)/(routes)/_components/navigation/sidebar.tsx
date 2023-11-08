@@ -1,5 +1,6 @@
 import { Logo } from "./logo";
-import { NavbarRoutes, SocialRoutes } from "@/lib/constants";
+import { NavbarRoutes } from "@/lib/constants/navbar-routes";
+import { SocialRoutes } from "@/lib/constants/social-routes";
 import { SidebarItem } from "./sidebar-item";
 import { SocialsItem } from "./socials-item";
 

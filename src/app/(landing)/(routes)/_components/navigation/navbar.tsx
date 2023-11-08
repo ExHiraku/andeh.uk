@@ -1,7 +1,8 @@
 import { Logo } from "./logo";
 import { MobileSidebar } from "./mobile-sidebar";
 import { NavbarItem } from "./navbar-item";
-import { NavbarRoutes, SocialRoutes } from "@/lib/constants";
+import { NavbarRoutes } from "@/lib/constants/navbar-routes";
+import { SocialRoutes } from "@/lib/constants/social-routes";
 import { SocialsItem } from "./socials-item";
 
 export const Navbar = () => {

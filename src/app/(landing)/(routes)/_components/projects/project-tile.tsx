@@ -10,6 +10,7 @@ import {
   AccordionItem,
   AccordionTrigger,
 } from "@/components/ui/accordion";
+import { cn } from "@/lib/utils";
 
 export const ProjectTile = ({
   projectData,
@@ -17,16 +18,23 @@ export const ProjectTile = ({
   projectData: FeaturedProject;
 }) => {
   return (
-    <div className="flex flex-col h-fit w-80 mx-auto col-span-12 sm:col-span-6 rounded-t-[30px] rounded-b-[15px] lg:col-span-4 md:w-full shadow-md">
+    <div className="relative h-fit shadow-md group overflow-hidden rounded-t-3xl rounded-b-xl bg-card">
+      <span className="sr-only">View Project {projectData.label}</span>
       <Image
-        src={projectData.displayImage || "/assets/blank-project.png"}
-        alt={projectData.label}
-        className="rounded-t-[30px] h-64 w-80 sm:w-full"
-        width={projectData.imageWidth || 379}
-        height={projectData.imageHeight || 281}
+        alt={`Project Image for ${projectData.label}`}
+        className="object-cover w-full h-60"
+        height="300"
+        src="/assets/blank-project.png"
+        style={{
+          aspectRatio: "400/300",
+          objectFit: "cover",
+        }}
+        width="400"
       />
-      <div className="bg-card py-12 px-4 rounded-b-[15px] text-3xl font-semibold w-80 sm:w-full">
-        {projectData.label}
+      <div className="bg-white p-4 dark:bg-card">
+        <h3 className="font-semibold text-lg md:text-xl">
+          {projectData.label}
+        </h3>
         <Accordion type="single" collapsible>
           <AccordionItem value="description" className="border-none">
             <AccordionTrigger className="text-lg text-white/70 flex justify-start gap-x-4">
@@ -37,35 +45,19 @@ export const ProjectTile = ({
             </AccordionContent>
           </AccordionItem>
         </Accordion>
-        {(projectData.liveDemo || projectData.sourceUrl) && (
-          <div>
-            <Separator className="mt-8 bg-zinc-700" />
-            <h2 className="text-3xl font-semibold text-center pt-8">Links</h2>
-            <div className="flex items-center justify-center gap-x-4 mt-4">
-              {projectData.liveDemo && (
-                <Link
-                  href={projectData.liveDemo}
-                  target="_blank"
-                  className="hover:text-primary"
-                >
-                  <Globe className="h-4 w-4" />
-                </Link>
+        <div className="flex flex-wrap mt-2">
+          {projectData.tags?.map((tag) => (
+            <span
+              key={tag.label}
+              className={cn(
+                "inline-flex items-center px-2.5 py-0.5 rounded-md text-sm font-medium mr-2 mb-2",
+                tag.color
               )}
-              {projectData.liveDemo && projectData.sourceUrl && (
-                <Separator orientation="vertical" className="bg-zinc-400 h-6" />
-              )}
-              {projectData.sourceUrl && (
-                <Link
-                  href={projectData.sourceUrl}
-                  target="_blank"
-                  className="hover:text-primary"
-                >
-                  <Github className="h-4 w-4" />
-                </Link>
-              )}
-            </div>
-          </div>
-        )}
+            >
+              {tag.label}
+            </span>
+          ))}
+        </div>
       </div>
     </div>
   );

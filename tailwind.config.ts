@@ -16,6 +16,9 @@ module.exports = {
       },
     },
     extend: {
+      screens: {
+        xs: "350px",
+      },
       boxShadow: {
         skill: "0 5px 5px 0 rgba(0, 0, 0, 0.10)",
       },

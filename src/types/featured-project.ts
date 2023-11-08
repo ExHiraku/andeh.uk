@@ -1,3 +1,8 @@
+interface ProjectTag {
+  label: string;
+  color: string;
+}
+
 export interface FeaturedProject {
   label: string;
   description: string;
@@ -6,4 +11,5 @@ export interface FeaturedProject {
   displayImage?: string;
   imageWidth?: number;
   imageHeight?: number;
+  tags?: ProjectTag[];
 }
