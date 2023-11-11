@@ -1,4 +1,4 @@
-import { Github, Instagram, Twitter } from "lucide-react";
+import { Github, Instagram, Linkedin, Twitter } from "lucide-react";
 
 import { NavbarRoute } from "@/types/navbar-route";
 
@@ -19,6 +19,12 @@ export const SocialRoutes: NavbarRoute[] = [
     label: "Follow me on GitHub!",
     icon: Github,
     href: "/github",
+    color: "",
+  },
+  {
+    label: "Connect with me on LinkedIn!",
+    icon: Linkedin,
+    href: "/linkedin",
     color: "",
   },
 ];

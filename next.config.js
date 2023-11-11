@@ -22,6 +22,11 @@ const nextConfig = {
         destination: "https://github.com/AndehUK",
         permanent: false,
       },
+      {
+        source: "/linkedin",
+        destination: "https://www.linkedin.com/in/andehx/",
+        permanent: false,
+      },
     ];
   },
 };

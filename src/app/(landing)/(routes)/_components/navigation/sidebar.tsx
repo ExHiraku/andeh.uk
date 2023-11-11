@@ -1,4 +1,4 @@
-import { Logo } from "./logo";
+import { Logo } from "../../../../../components/logo";
 import { NavbarRoutes } from "@/lib/constants/navbar-routes";
 import { SocialRoutes } from "@/lib/constants/social-routes";
 import { SidebarItem } from "./sidebar-item";

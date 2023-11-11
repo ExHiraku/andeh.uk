@@ -1,4 +1,4 @@
-import { Logo } from "./logo";
+import { Logo } from "../../../../../components/logo";
 import { MobileSidebar } from "./mobile-sidebar";
 import { NavbarItem } from "./navbar-item";
 import { NavbarRoutes } from "@/lib/constants/navbar-routes";
