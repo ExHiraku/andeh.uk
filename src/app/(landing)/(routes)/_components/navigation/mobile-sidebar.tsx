@@ -6,7 +6,7 @@ import { Sidebar } from "./sidebar";
 export const MobileSidebar = () => {
   return (
     <Sheet>
-      <SheetTrigger className="md:hidden hover:opacity-75 transition">
+      <SheetTrigger className="min-[865px]:hidden hover:opacity-75 transition">
         <Menu />
       </SheetTrigger>
       <SheetContent side="right" className="bg-background">

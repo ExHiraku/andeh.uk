@@ -1,4 +1,4 @@
-import { Hero } from "./_components/hero";
+import { Hero } from "./_components/hero/hero-content";
 import { FeaturedProjects } from "./_components/projects/featured-projects";
 import { WhatIDo } from "./_components/skills/what-i-do";
 import { ClientTestimonials } from "./_components/testimonials/client-testimonials";

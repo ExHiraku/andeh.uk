@@ -1,7 +1,10 @@
 import "../styles/globals.css";
+
 import type { Metadata } from "next";
 import { Poppins } from "next/font/google";
+import { Toaster } from "sonner";
 
+import { ModalProvider } from "@/components/providers/modal-provider";
 import { ThemeProvider } from "@/components/providers/theme-provider";
 import { cn } from "@/lib/utils";
 
@@ -26,6 +29,8 @@ export default function RootLayout({
           enableSystem
           storageKey="andeh-theme"
         >
+          <ModalProvider />
+          <Toaster position="top-center" />
           {children}
         </ThemeProvider>
       </body>

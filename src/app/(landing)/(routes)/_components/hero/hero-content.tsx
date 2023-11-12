@@ -1,8 +1,10 @@
+"use client";
+
 import { ChevronRight } from "lucide-react";
 import Image from "next/image";
 
 import { Heading } from "@/components/heading";
-import { Button } from "@/components/ui/button";
+import { ContactButton } from "./contact-button";
 
 export const Hero = () => {
   return (
@@ -23,15 +25,7 @@ export const Hero = () => {
               brought to life!
             </p>
           </div>
-          <Button
-            className="flex flex-row gap-x-4 capitalize mx-auto text-3xl p-0 text-primary font-semibold hover:underline hover:text-primary hover:bg-transparent md:mx-0 "
-            variant="ghost"
-          >
-            <p>
-              Let&apos;s work together <span className="md:hidden">!</span>
-            </p>
-            <ChevronRight className="hidden h-8 w-8 md:flex" />
-          </Button>
+          <ContactButton />
         </div>
         <div className="flex justify-center md:justify-end items-center w-full lg:justify-center">
           <Image

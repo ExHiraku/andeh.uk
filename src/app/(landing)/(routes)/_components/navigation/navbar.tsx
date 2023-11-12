@@ -8,13 +8,13 @@ import { SocialsItem } from "./socials-item";
 export const Navbar = () => {
   return (
     <nav className="p-6 border-b border-primary shadow-lg">
-      <div className="flex items-center justify-between md:hidden">
+      <div className="flex items-center justify-between min-[865px]:hidden">
         <Logo />
         <div className="flex items-center">
           <MobileSidebar />
         </div>
       </div>
-      <div className="hidden md:flex items-center justify-between max-w-7xl mx-auto">
+      <div className="hidden min-[865px]:flex items-center justify-between max-w-7xl mx-auto">
         <div className="flex items-center gap-x-20 lg:gap-x-32">
           <Logo />
           <div className="flex items-center gap-x-8">

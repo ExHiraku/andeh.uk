@@ -1,4 +1,4 @@
-import { HomeIcon, User2, GitFork, Mail } from "lucide-react";
+import { HomeIcon, User2, GitFork, Star } from "lucide-react";
 
 import { NavbarRoute } from "@/types/navbar-route";
 
@@ -22,9 +22,9 @@ export const NavbarRoutes: NavbarRoute[] = [
     color: "",
   },
   {
-    label: "Contact",
-    icon: Mail,
-    href: "#contact",
+    label: "Testimonials",
+    icon: Star,
+    href: "#testimonials",
     color: "",
   },
 ];

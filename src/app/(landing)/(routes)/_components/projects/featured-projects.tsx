@@ -1,4 +1,4 @@
-import { GitFork } from "lucide-react";
+import { GitFork, Github } from "lucide-react";
 
 import { ProjectTile } from "./project-tile";
 import { Heading } from "@/components/heading";
@@ -22,9 +22,20 @@ export const FeaturedProjects = () => {
           <ProjectTile key={data.label} projectData={data} />
         ))}
       </div>
-      <Button asChild className="flex mx-auto w-fit">
-        <Link href="/projects">View all Projects</Link>
-      </Button>
+      <div className="flex mx-auto justify-center gap-4">
+        <Button asChild className="w-fit">
+          <Link href="/projects">View all Projects</Link>
+        </Button>
+        <Button
+          asChild
+          variant="outline"
+          className="border-primary border-2 px-2 hover:bg-primary/10"
+        >
+          <Link href="/github">
+            <Github />
+          </Link>
+        </Button>
+      </div>
     </div>
   );
 };

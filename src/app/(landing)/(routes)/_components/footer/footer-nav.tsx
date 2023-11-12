@@ -27,7 +27,11 @@ export const FooterNav = () => {
           <p className="text-primary font-semibold">Collaboration</p>
           <div className="flex gap-7 xs:flex-col">
             <FooterNavItem href="/github" label="GitHub" target="_blank" />
-            <FooterNavItem href="/sponsors" label="Sponsors" />
+            <FooterNavItem
+              href="https://bisecthosting.com/Exult"
+              label="BisectHosting"
+              target="_blank"
+            />
           </div>
         </div>
         <div className="col-span-4 xs:col-span-2 sm:col-span-1 flex flex-col gap-y-8">
