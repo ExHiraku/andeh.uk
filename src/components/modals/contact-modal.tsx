@@ -98,122 +98,119 @@ export const ContactModal = () => {
   return (
     <Dialog open={isModalOpen} onOpenChange={handleClose}>
       <DialogContent className="bg-background text-white p-0 overflow-hidden">
-        <div className="max-w-xl mx-auto px-4">
-          <DialogHeader className="pt-24 pb-6 px-6">
-            <DialogTitle className="text-center text-2xl font-bold">
-              Get in touch!
-            </DialogTitle>
-            <DialogDescription className="text-center">
-              I&apos;m always open to new opportunities and collaborations. Feel
-              free to reach out to me with any questions or comments you may
-              have.
-            </DialogDescription>
-          </DialogHeader>
-          <Form {...form}>
-            <form
-              onSubmit={form.handleSubmit(onSubmit)}
-              className="flex flex-col items-center justify-center space-y-8"
-            >
-              <div className="space-y-4 w-72 xs:w-96">
-                <FormField
-                  control={form.control}
-                  name="name"
-                  render={({ field }) => (
-                    <FormItem>
-                      <FormControl>
-                        <Input
-                          disabled={isLoading}
-                          className="bg-white border-0 focus-visible:ring-0 text-black focus-visible:ring-offset-0"
-                          placeholder="Your Name"
-                          {...field}
-                        />
-                      </FormControl>
-                      <FormMessage />
-                    </FormItem>
-                  )}
-                />
-                <FormField
-                  control={form.control}
-                  name="email"
-                  render={({ field }) => (
-                    <FormItem>
-                      <FormControl>
-                        <Input
-                          disabled={isLoading}
-                          className="bg-white border-0 focus-visible:ring-0 text-black focus-visible:ring-offset-0"
-                          placeholder="Your Email Address"
-                          {...field}
-                        />
-                      </FormControl>
-                      <FormMessage />
-                    </FormItem>
-                  )}
-                />
-                <FormField
-                  control={form.control}
-                  name="topic"
-                  render={({ field }) => (
-                    <FormItem>
-                      <Select
+        <DialogHeader className="pt-24 pb-6 px-6">
+          <DialogTitle className="text-center text-2xl font-bold">
+            Get in touch!
+          </DialogTitle>
+          <DialogDescription className="text-center max-w-lg mx-auto">
+            I&apos;m always open to new opportunities and collaborations. Feel
+            free to reach out to me with any questions or comments you may have.
+          </DialogDescription>
+        </DialogHeader>
+        <Form {...form}>
+          <form
+            onSubmit={form.handleSubmit(onSubmit)}
+            className="flex flex-col items-center justify-center space-y-8"
+          >
+            <div className="space-y-4 w-72 xs:w-96">
+              <FormField
+                control={form.control}
+                name="name"
+                render={({ field }) => (
+                  <FormItem>
+                    <FormControl>
+                      <Input
                         disabled={isLoading}
-                        onValueChange={field.onChange}
-                        defaultValue={field.value}
-                      >
-                        <FormControl>
-                          <SelectTrigger
-                            className={cn(
-                              "bg-white border-0 focus-visible:ring-0 focus-visible:ring-offset-0 capitalize",
-                              field.value.endsWith("?")
-                                ? "text-muted-foreground"
-                                : "text-black"
-                            )}
-                          >
-                            <SelectValue />
-                          </SelectTrigger>
-                        </FormControl>
-                        <SelectContent>
-                          {Object.values(ContactTopic).map((topic) => (
-                            <SelectItem
-                              key={topic}
-                              value={topic}
-                              className="capitalize"
-                              disabled={topic.endsWith("?")}
-                            >
-                              {topic.toLowerCase()}
-                            </SelectItem>
-                          ))}
-                        </SelectContent>
-                      </Select>
-                      <FormMessage />
-                    </FormItem>
-                  )}
-                />
-                <FormField
-                  control={form.control}
-                  name="message"
-                  render={({ field }) => (
-                    <FormItem>
+                        className="bg-white w-4/5 sm:w-full mx-auto border-0 focus-visible:ring-0 text-black focus-visible:ring-offset-0"
+                        placeholder="Your Name"
+                        {...field}
+                      />
+                    </FormControl>
+                    <FormMessage />
+                  </FormItem>
+                )}
+              />
+              <FormField
+                control={form.control}
+                name="email"
+                render={({ field }) => (
+                  <FormItem>
+                    <FormControl>
+                      <Input
+                        disabled={isLoading}
+                        className="bg-white w-4/5 sm:w-full mx-auto border-0 focus-visible:ring-0 text-black focus-visible:ring-offset-0"
+                        placeholder="Your Email Address"
+                        {...field}
+                      />
+                    </FormControl>
+                    <FormMessage />
+                  </FormItem>
+                )}
+              />
+              <FormField
+                control={form.control}
+                name="topic"
+                render={({ field }) => (
+                  <FormItem>
+                    <Select
+                      disabled={isLoading}
+                      onValueChange={field.onChange}
+                      defaultValue={field.value}
+                    >
                       <FormControl>
-                        <Textarea
-                          disabled={isLoading}
-                          className="bg-white h-[80px] max-h-64 border-0 focus-visible:ring-0 text-black focus-visible:ring-offset-0"
-                          placeholder="Your Message"
-                          {...field}
-                        />
+                        <SelectTrigger
+                          className={cn(
+                            "bg-white w-4/5 sm:w-full mx-auto border-0 focus-visible:ring-0 focus-visible:ring-offset-0 capitalize",
+                            field.value.endsWith("?")
+                              ? "text-muted-foreground"
+                              : "text-black"
+                          )}
+                        >
+                          <SelectValue />
+                        </SelectTrigger>
                       </FormControl>
-                      <FormMessage />
-                    </FormItem>
-                  )}
-                />
-              </div>
-              <div className="text-center pb-8">
-                <Button className="text-center mx-auto" disabled={isLoading}>
-                  Get in Touch
-                </Button>
-              </div>
-            </form>
-          </Form>
-        </div>
+                      <SelectContent>
+                        {Object.values(ContactTopic).map((topic) => (
+                          <SelectItem
+                            key={topic}
+                            value={topic}
+                            className="capitalize"
+                            disabled={topic.endsWith("?")}
+                          >
+                            {topic.toLowerCase()}
+                          </SelectItem>
+                        ))}
+                      </SelectContent>
+                    </Select>
+                    <FormMessage />
+                  </FormItem>
+                )}
+              />
+              <FormField
+                control={form.control}
+                name="message"
+                render={({ field }) => (
+                  <FormItem>
+                    <FormControl>
+                      <Textarea
+                        disabled={isLoading}
+                        className="bg-white w-4/5 sm:w-full mx-auto h-[80px] max-h-64 border-0 focus-visible:ring-0 text-black focus-visible:ring-offset-0"
+                        placeholder="Your Message"
+                        {...field}
+                      />
+                    </FormControl>
+                    <FormMessage />
+                  </FormItem>
+                )}
+              />
+            </div>
+            <div className="text-center pb-8">
+              <Button className="text-center mx-auto" disabled={isLoading}>
+                Get in Touch
+              </Button>
+            </div>
+          </form>
+        </Form>
         <DialogFooter className="bg-background ml-auto p-6">
           <Logo />
         </DialogFooter>
