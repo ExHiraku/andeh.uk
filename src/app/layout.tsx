@@ -11,6 +11,10 @@ import { cn } from "@/lib/utils";
 const font = Poppins({ subsets: ["latin"], weight: "400" });
 
 export const metadata: Metadata = {
+  metadataBase: new URL("https://andeh.uk"),
+  alternates: {
+    canonical: "/",
+  },
   title: "Andeh",
   description:
     "Blending aesthetics with functionality using a diverse tech stack in crafting seamless user experiences and robust backend architectures.",
