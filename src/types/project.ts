@@ -3,7 +3,7 @@ interface ProjectTag {
   color: string;
 }
 
-export interface FeaturedProject {
+export interface Project {
   label: string;
   description: string;
   liveDemo?: string;

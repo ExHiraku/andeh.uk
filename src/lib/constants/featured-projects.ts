@@ -1,10 +1,9 @@
-import { FeaturedProject } from "@/types/featured-project";
+import { Project } from "@/types/project";
 
-export const FeaturedProjects: FeaturedProject[] = [
+export const FeaturedProjects: Project[] = [
   {
     label: "This Website!",
-    description:
-      "The single-page website you are currently browsing now! Built using NextJS, React and TailwindCSS!",
+    description: "The multi-page website you are currently browsing now!",
     liveDemo: "https://andeh.uk",
     sourceUrl: "https://github.com/AndehUK/andeh.uk",
     displayImage: "",

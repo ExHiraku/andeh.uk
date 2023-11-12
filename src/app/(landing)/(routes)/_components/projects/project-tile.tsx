@@ -1,9 +1,6 @@
 import Image from "next/image";
-import { Github, Globe } from "lucide-react";
 
-import { FeaturedProject } from "@/types/featured-project";
-import { Separator } from "@/components/ui/separator";
-import Link from "next/link";
+import { Project } from "@/types/project";
 import {
   Accordion,
   AccordionContent,
@@ -11,12 +8,11 @@ import {
   AccordionTrigger,
 } from "@/components/ui/accordion";
 import { cn } from "@/lib/utils";
+import { Separator } from "@/components/ui/separator";
+import Link from "next/link";
+import { Github, Globe } from "lucide-react";
 
-export const ProjectTile = ({
-  projectData,
-}: {
-  projectData: FeaturedProject;
-}) => {
+export const ProjectTile = ({ projectData }: { projectData: Project }) => {
   return (
     <div className="relative h-fit shadow-md group overflow-hidden rounded-t-3xl rounded-b-xl bg-card">
       <span className="sr-only">View Project {projectData.label}</span>
@@ -58,6 +54,36 @@ export const ProjectTile = ({
             </span>
           ))}
         </div>
+      </div>
+      <div className="w-full mx-auto border-t-[0.1px] border-primary flex justify-between">
+        {projectData.liveDemo && (
+          <Link
+            className="flex gap-x-2 py-4 w-full items-center mx-auto justify-center bg-primary/5 text-white hover:bg-primary/10"
+            href={projectData.liveDemo}
+            target="_blank"
+          >
+            <Globe />
+            Website
+          </Link>
+        )}
+        {projectData.liveDemo && projectData.sourceUrl && (
+          <div className="flex mx-auto justify-center">
+            <Separator
+              orientation="vertical"
+              className="bg-primary my-auto w-[1px]"
+            />
+          </div>
+        )}
+        {projectData.sourceUrl && (
+          <Link
+            className="flex gap-x-2 py-4 w-full items-center mx-auto justify-center bg-primary/5 text-white hover:bg-primary/10"
+            href={projectData.sourceUrl}
+            target="_blank"
+          >
+            <Github />
+            Source
+          </Link>
+        )}
       </div>
     </div>
   );
