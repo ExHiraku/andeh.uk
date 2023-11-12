@@ -35,8 +35,8 @@ export const FooterNav = ({ bgClassName }: { bgClassName?: string }) => {
             {pathname !== "/" && <FooterNavItem href="/" label="Home" />}
             <FooterNavItem href="/blog" label="Blog" />
             <FooterNavItem
-              href="/discord"
-              label="Discord Server"
+              href="/resume.pdf"
+              label="CV / Resume"
               target="_blank"
             />
           </div>
