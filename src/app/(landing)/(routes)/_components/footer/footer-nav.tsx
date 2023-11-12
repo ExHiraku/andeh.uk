@@ -1,8 +1,12 @@
 import Link from "next/link";
 
 import { Logo } from "@/components/logo";
+import { Button } from "@/components/ui/button";
+import { useModal } from "@/components/hooks/use-modal";
 
 export const FooterNav = () => {
+  const { onOpen } = useModal();
+
   return (
     <footer className="bg-background max-w-7xl w-full mx-auto min-[1280px]:rounded-t-3xl">
       <div className="grid p-8 gap-16 grid-cols-4 sm:p-[4.5rem] sm:grid-cols-5">
@@ -21,21 +25,28 @@ export const FooterNav = () => {
               label="Discord Server"
               target="_blank"
             />
+            <FooterNavItem href="/blog" label="Blog" />
           </div>
         </div>
         <div className="col-span-4 xs:col-span-2 sm:col-span-1 flex flex-col gap-y-8">
           <p className="text-primary font-semibold">Collaboration</p>
           <div className="flex gap-7 xs:flex-col">
             <FooterNavItem href="/github" label="GitHub" target="_blank" />
-            <FooterNavItem
-              href="https://bisecthosting.com/Exult"
-              label="BisectHosting"
-              target="_blank"
-            />
+            <FooterNavItem href="/sponsors" label="Sponsors" />
+            <Button
+              variant="ghost"
+              size="inherit"
+              className="text-zinc-400 hover:text-primary w-fit p-0 h-fit text-md hover:bg-background"
+              onClick={() => {
+                onOpen("contact");
+              }}
+            >
+              <p className="text-zinc-400 hover:text-primary">Contact</p>
+            </Button>
           </div>
         </div>
         <div className="col-span-4 xs:col-span-2 sm:col-span-1 flex flex-col gap-y-8">
-          <p className="text-primary font-semibold">Business</p>
+          <p className="text-primary font-semibold">Other</p>
           <div className="flex gap-7 xs:flex-col">
             <FooterNavItem
               href="https://exultsoftware.com"
@@ -45,6 +56,11 @@ export const FooterNav = () => {
             <FooterNavItem
               href="https://kerberus.gg"
               label="Kerberus"
+              target="_blank"
+            />
+            <FooterNavItem
+              href="https://github.com/AndehUK/andeh.uk"
+              label="Source Code"
               target="_blank"
             />
           </div>

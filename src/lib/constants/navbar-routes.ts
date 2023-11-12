@@ -1,4 +1,4 @@
-import { HomeIcon, User2, GitFork, Star } from "lucide-react";
+import { HomeIcon, GitFork, ClipboardEdit } from "lucide-react";
 
 import { NavbarRoute } from "@/types/navbar-route";
 
@@ -10,21 +10,13 @@ export const NavbarRoutes: NavbarRoute[] = [
     color: "",
   },
   {
-    label: "About",
-    icon: User2,
-    href: "#about",
-    color: "",
-  },
-  {
     label: "Projects",
     icon: GitFork,
-    href: "#projects",
-    color: "",
+    href: "/projects",
   },
   {
-    label: "Testimonials",
-    icon: Star,
-    href: "#testimonials",
-    color: "",
+    label: "Blog",
+    icon: ClipboardEdit,
+    href: "/blog",
   },
 ];

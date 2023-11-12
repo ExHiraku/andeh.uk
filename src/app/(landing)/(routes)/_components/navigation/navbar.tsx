@@ -1,11 +1,17 @@
+"use client";
+
+import { usePathname } from "next/navigation";
+
 import { Logo } from "../../../../../components/logo";
 import { MobileSidebar } from "./mobile-sidebar";
 import { NavbarItem } from "./navbar-item";
+import { SocialsItem } from "./socials-item";
 import { NavbarRoutes } from "@/lib/constants/navbar-routes";
 import { SocialRoutes } from "@/lib/constants/social-routes";
-import { SocialsItem } from "./socials-item";
 
 export const Navbar = () => {
+  const pathname = usePathname();
+
   return (
     <nav className="p-6 border-b border-primary shadow-lg">
       <div className="flex items-center justify-between min-[865px]:hidden">
@@ -22,7 +28,7 @@ export const Navbar = () => {
               <NavbarItem
                 key={route.label}
                 route={route}
-                isActive={route.href === "/"}
+                isActive={route.href === pathname}
               />
             ))}
           </div>
