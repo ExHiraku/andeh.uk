@@ -23,11 +23,10 @@ export const FeaturedProjects: Project[] = [
     ],
   },
   {
-    label: "ExVision",
+    label: "Kerberus.gg",
     description:
-      "A full-stack web application providing AI SaaS built using NextJS, React, TailwindCSS, OpenAI and more!",
-    liveDemo: "https://vision.exultsoftware.com",
-    sourceUrl: "https://github.com/AndehUK/ExVision",
+      "A multi-page website for Kerberus, a minecraft server network and minecraft modding studio!",
+    liveDemo: "https://kerberus.gg",
     displayImage: "",
     tags: [
       {
@@ -45,10 +44,10 @@ export const FeaturedProjects: Project[] = [
     ],
   },
   {
-    label: "Blu Website",
-    description:
-      "A multi-page website built for the landscaping and car detailing company called Blu Contracting! Built using NextJS, React and TailwindCSS.",
-    liveDemo: "https://blu.exultsoftware.com",
+    label: "ExVision",
+    description: "An AI SaaS Web Application built around the OpenAI API!",
+    liveDemo: "https://exvision.andeh.uk",
+    sourceUrl: "https://github.com/AndehUK/ExVision",
     displayImage: "",
     tags: [
       {
@@ -62,6 +61,10 @@ export const FeaturedProjects: Project[] = [
       {
         label: "TailwindCSS",
         color: "bg-blue-300 text-black/80",
+      },
+      {
+        label: "OpenAI",
+        color: "bg-white text-black",
       },
     ],
   },
